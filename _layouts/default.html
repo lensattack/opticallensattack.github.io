@@ -1,0 +1,243 @@
+
+<html>
+	<head>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-1XTFM65VS2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-1XTFM65VS2');
+</script>
+	<meta charset=“UTF-8”>
+
+		<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans:400,bold,900,600">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+		  <!-- Custom styles for this template -->
+ 		 <link href="css/custom.css" rel="stylesheet">
+
+	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+ 	 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+		<title>DoubleStar</title>
+	</head>
+	<body>
+		<div class = "global_container">
+			<div class = "section"  >		
+				<img width = "800px" src="logo.png" alt="Logo">
+				<h1>Long-Range Attack Towards Depth Estimation based Obstacle Avoidance in Autonomous Systems </h1>
+				<p class="text-center" style="font-size:20px"><a href="https://arxiv.org/abs/2110.03154">Read the Paper</a>,
+
+					<a href="#bibtex" data-toggle="collapse" role="button">
+					Cite <i class="fa fa-quote-right" aria-hidden="true"></i></a>
+						<div id="bibtex" style="margin-top: 1.5em;" class="collapse" align="left">
+							<pre style="white-space: pre">
+@inproceedings{zhou2022doublestar,
+  title={DoubleStar: Long-Range Attack Towards Depth Estimation based Obstacle Avoidance in Autonomous Systems},
+  author={Zhou, Ce and Yan, Qiben and Shi, Yan and Sun, Lichao},
+  booktitle={USENIX Security Symposium},
+  month={August},
+  year={2022}
+}
+			</pre></p></div>
+				<div class ="boxed">
+					<p> DoubleStar is a long-range attack towards stereo cameras (a.k.a., 3D depth camera) that
+injects fake obstacle depth by projecting pure light from two
+complementary light sources. We successfully attack two commercial stereo cameras designed for autonomous systems (ZED and Intel RealSense D415). The visualization of fake depth perceived by the stereo cameras illustrates the false stereo matching induced by DoubleStar. We use Ardupilot to simulate the attack
+and demonstrate its impact on drones. To validate the attack
+on real autonomous systems, we perform a real-world attack
+towards a commercial drone (DJI Phantom 4 Pro V2). Our attack can bring a flying drone to a sudden stop or drift it away from its original path, and it can also cause
+false alarms over a long distance under various lighting
+conditions. our experimental results show that DoubleStar creates fake depth up to 15 meters in distance at night and up to 8 meters during the daytime. DoubleStar attack may cause severe accidents, even loss of lives, if we blindly trust the obstacle avoidance capability of autonomous systems. </p>
+</p>
+					
+			<img width = "600px" src="DoubleStar.png" alt="doublestar">
+			<br>
+			<h1>Target Devices in the Experiment</h1>
+				<img width = "800px" src="devices.png" alt="device">
+
+				
+				
+				
+				<h1> Team </h1>
+					<div class ="boxed" style="margin-top=3em;">
+						<p>
+							DoubleStar was discovered by the following team of academic researchers:
+						</p>
+						<ul>
+					<li>
+						<a href=""><strong>Ce Zhou</strong></a> at <a href="http://seit.egr.msu.edu/">SEIT Lab</a>, <a href="https://www.cse.msu.edu/">Michigan State University</a></li>
+						<li><a href="http://cse.msu.edu/~qyan/"><strong>Qiben Yan</a></strong> at <a href="http://seit.egr.msu.edu/">SEIT Lab</a>, <a href="https://www.cse.msu.edu/">Michigan State University</a></li>
+						<li><a href=""><strong>Yan Shi</strong></a> at <a href="https://www.cse.msu.edu/">Michigan State University</a></li>		
+				      		<li><a href="https://www.cs.uic.edu/~lsun/"><strong>Lichao Sun</a></strong> at <a href="https://engineering.lehigh.edu/cse">Lehigh University</a></li>
+
+						</ul>
+<p class="text-center"><strong>Contact us at <a href="mailto:surfingattack@gmail.com">fakedepth2021@gmail.com</a></strong></p>
+				
+
+				 <div class="text-center mt-auto" style="width:100%;margin-top: 1.5em; margin-bottom: 1.5em; display:flex;justify-content:space-around;align-items:center; flex-wrap: wrap;">
+      <div>
+      <a href="https://www.cse.msu.edu/">
+        <img width = "160px" src="MSU-logo.png" alt="Michigan State University logo" class="img-fluid" />
+				<div style = "height:10px"></div>
+      </a>
+      </div>
+			<a href="https://engineering.lehigh.edu/cse">
+        <img width="160px" src="Lehigh-logo.png" alt="Lehigh logo" class="img-fluid" />
+			</a>
+ </div>
+</div>
+
+
+				<h1>Features of DoubleStar</h1>
+
+					<ul>
+						<li class="question">
+							
+							<b> How does DoubleStar work?</b>
+
+								<p class="answer">
+									DoubleStar is the first black-box attack towards stereo vision-based depth estimation algorithms. An attacker can inject two light sources separately into each len of the stereo camera. The injected light source will become brighter and more prominent in one camera than the other.  Since stereo matching tries to find the pixels in images corresponding to the same point, it recognizes the injected strong light sources in left and right images as the same object, resulting in a faked object depth.  
+												</p>
+					<b>What devices can be compromised by DoubleStar?</b>
+					<p class="answer">
+									We validated successful DoubleStar attacks on the two commercial stereo cameras designed for robotic vehicles and drones (ZED and Intel RealSense D415) and one of the most advanced drones (DJI Phantom 4 Pro V2) in different ambient light conditions. We believe more devices equipped with stereo camera could be vulnerable.
+												</p>
+
+					<br>
+
+					<b>Does DoubleStar work for state-of-the-art AI-based depth estimation algorithms?</b>
+					<p class="answer">
+									Yes, DoubleStar not only works for classic stereo depth estimation algorithms, e.g., block matching (BM) and semi global block matching (SGBM), but it also works for the state-of-the-art stereo vision based depth estimation algorithms. We successfully verified our attack towards DispNet, PSMNet, and AANet.    </p>
+
+					<br>
+
+							<b> What can the attackers do?</b>
+								<li class="answer">  &#9873  Drift the drone away from its original path. </li>
+								<li class="answer">  &#9873  Suddenly stop a moving drone. </li>
+								<li class="answer">  &#9873  Shake the drone dramatically.</li>
+						
+						</li><br>
+
+
+				
+						<b> How do you defend against DoubleStar?</b>
+								<li class="answer">  &#9733 Detect over-saturated pixels in the stereo image pair. </li>
+								<li class="answer">  &#9733 Add camera lens hood to reduce the lens flare effect. </li>
+								<li class="answer">  &#9733 Use sensor fusion technique to fuse different types of data. </li>
+								<li class="answer">  &#9733 Build  robust deep neural  networks. </li>
+								
+						</li>
+						<p></p>
+
+						<p></p>
+
+
+					</ul>		
+						
+						
+						
+						
+						
+				<h1> </h1>
+					<div class ="boxed" style="margin-top=3em;">							
+						<p class="text-center"></p>
+						<div class="text-center mt-auto" style="width:100%;margin-top: 1.5em; margin-bottom: 1.5em; display:flex;justify-content:space-around;align-items:center; flex-wrap: wrap;">
+							<div>
+									<div style = "height:10px"></div>
+						</a>
+      				
+ </div>
+</div>
+
+
+				<h1>DoubleStar Attack Demonstration</h1>
+				<iframe width="560" height="315" src="https://www.youtube.com/embed/FSPRW2ss82c" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+				<h2>Drift Away and Shake Flying Drone (7m)</h2>
+				<iframe width="560" height="315" src="https://www.youtube.com/embed/yE9gC2TvBFc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				
+				<h1>More Attack Scenarios</h1>							
+				<h2>Stop Flying Drone in the Day (6m)</h2>
+				<iframe width="560" height="315" src="https://www.youtube.com/embed/wVn6NhH5TdY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				
+				<h2>Stop Flying Drone in the Day (7m)</h2>
+				<iframe width="560" height="315" src="https://www.youtube.com/embed/VaRDQQMxnXk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				
+				<h2>Stop Flying Drone at Night (6m)</h2>
+				<iframe width="560" height="315" src="https://www.youtube.com/embed/eNdrC2zM2Zc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				
+				<h2>Stop Flying Drone at Night (7m)</h2>
+				<iframe width="560" height="315" src="https://www.youtube.com/embed/3E081NT3VT8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				
+				
+				<h2>Different Attack Patterns</h2>
+				<p> Attack patterns have significant effects on fake depth. The video shows an example that X-shape attacks could produce near-distance fake depths, while trapezoid-shape attack could create far-distance fake depths.</p>
+				<iframe width="560" height="315" src="https://www.youtube.com/embed/E_mr5t8x8YU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				
+				<h2>Drone Attack Verification</h2>					
+				<iframe width="560" height="315" src="https://www.youtube.com/embed/wYsgPsVNVrw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				
+				<h2>Aiming the Drone in Real-Time Attack</h2>
+				<p>Since the minor change of the lens angle can cause a significant light coverage difference on the victim side, the attacker can easily track the flying drone by continuously controlling the aiming angle of the taped lens. As long as the projection light is injected to the stereo camera, DoubleStar can always succeed.</p>
+				<iframe width="560" height="315" src="https://www.youtube.com/embed/3HKP3rBBoPY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>	
+				<h1>Simulation</h1>
+				<h2>Simulation Workflow of DoubleStar</h2>
+					<p> We simulate DoubleStar drone attacks using Ardupilot and AirSim. Ardupilot is used for simulating MAVProxy as the ground station, and ArduCopter as the drone. AirSim provides the sensor inputs to the ArduCopter. we design a depth manipulator and embed it between ArduCopter and AirSim. By designing different fake obstacle depths in a realistic environment, we successfully demonstrate that our attack can achieve real-time drone control. </p> 
+				<div class ="boxed">
+				<div class="text-center mt-auto" style="width:100%;margin-top: 1.5em; margin-bottom: 1.5em; display:flex;justify-content:space-around;align-items:center; flex-wrap: wrap;">
+					<div>
+					<a href="">
+					  <img width = "560px" src="Picture8.png" alt="Experiment Photos"  />
+					</a>
+					</div>
+			 		</div>
+					</div>
+					
+					
+				<h2></h2>
+				<iframe width="560" height="315" src="https://www.youtube.com/embed/ue4LhXZVzSY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			<div>
+			<h1>Attack Visualization on Stereo Cameras</h1>
+				<p> DoubleStar includes two distinctive attack formats: beams attack and orbs attack, which leverage projected light beams and lens flare orbs respectively to cause false depth perception. We can visualize the two attacks through the ZED and Intel RealSense D415 stereo cameras.</p>
+				<h2>Beams Attack on ZED</h2>
+				<p> An attacker injects the light beams with the same projection intensity using two projectors (i.e., P and Q) into the right and left camera, respectively. It can be observed that one of the injected light sources is brighter than the other one when received by the camera, which becomes a more prominent feature in the image. 
+				Such phenomenon causes the depth estimation algorithms to mismatch the two highlighted light sources in the images as the same object due to the weakness in depth perception. As a result, a fake near-distance depth is created in the depth map and visualized in the 3D point cloud. </p>	
+				<div class ="boxed">
+				<div class="text-center mt-auto" style="width:100%;margin-top: 1.5em; margin-bottom: 1.5em; display:flex;justify-content:space-around;align-items:center; flex-wrap: wrap;">
+					<div>
+					<a href="">
+					  <img width = "960px" src="Picture3.png" alt="Experiment Photos"  />
+					</a>
+					</div>
+			 		</div>
+					</div>
+				<h2>Orbs Attack on ZED</h2>
+				<p> Two lens flare orbs generated by the strong light sources in the stereo images can mislead the depth perception to falsely identify them as a 3D obstacle.</p>
+					<div class ="boxed">
+				<div class="text-center mt-auto" style="width:100%;margin-top: 1.5em; margin-bottom: 1.5em; display:flex;justify-content:space-around;align-items:center; flex-wrap: wrap;">
+					<div>
+					<a href="">
+					  <img width = "960px" src="Picture4.png" alt="Experiment Photos"  />
+					</a>
+					</div>
+			 		</div>
+					</div>	
+				<h2>Attack Validation on RealSense</h2>
+				<p> A near-distance fake depth (around 0.5m) can be generated when the attack distance is 10m in RealSense. It demonstrates that DoubleStar remains effective even without the access to the camera's left and right images.</p>
+					<div class ="boxed">
+				<div class="text-center mt-auto" style="width:100%;margin-top: 1.5em; margin-bottom: 1.5em; display:flex;justify-content:space-around;align-items:center; flex-wrap: wrap;">
+					<div>
+					<a href="">
+					  <img width = "600px" src="Picture5.png" alt="Experiment Photos"  />
+					</a>
+					</div>
+			 		</div>
+					</div>	
+				<div>
+	
+	</body>
+</html>
